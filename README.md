@@ -20,4 +20,10 @@
     <li>SASS (SCSS Syntax)</li>
 </ul>
 
+## Contributor
+
+<div align="center">
+    <a href="https://github.com/JAILBREAK-101">Oluwagbemiga Awosope</a>
+</div>
+
 <small>&copy; Oluwagbemiga 2023</small>
