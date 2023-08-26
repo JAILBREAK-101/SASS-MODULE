@@ -1,0 +1,1488 @@
+@charset "UTF-8";
+/* ©️ Copyright Oluwagbemiga 2023 */
+/* === Imports for all scss files ==== */
+/* ©️ Copyright Oluwagbemiga 2023 */
+/* Base and Reset Styles for the application */
+/* Imports for the base styles */
+/* ©️ Copyright Oluwagbemiga 2023 */
+/* === Set and Modifyable variables ==== */
+/* === Very Basic Variables ==== */
+/* === Colors (you can change the colors) ==== */
+/* Primary Color */
+/* Secondary Color */
+/* Tetiary Color */
+/* === Other Variables ==== */
+/* === Your Variables come in under here ==== */
+/* ©️ Copyright Oluwagbemiga 2023 */
+/* Reusable Mixins for the project - you can add yours */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+/* === reset styles ==== */
+::selection {
+  background-color: white;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p,
+blockquote,
+pre,
+ul,
+q,
+s,
+samp,
+strong,
+sub,
+sup {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  padding: 0.8rem 1.2rem;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* === Content and Element Specific styles shouldn't be inside here, only very basic ones should ==== */
+/* === You can add your own base styles under here ==== */
+/* ©️ Copyright Oluwagbemiga 2023 */
+/* Layout for the application: you can add yours and modify the existing ones */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.d-flex {
+  display: flex;
+}
+.d-flex--center {
+  justify-content: center;
+  align-items: center;
+}
+.d-flex--align-start {
+  align-items: flex-start;
+}
+.d-flex--align-end {
+  align-items: flex-end;
+}
+.d-flex--justify-start {
+  justify-content: flex-start;
+}
+.d-flex--justify-end {
+  justify-content: flex-end;
+}
+
+.flex-direction-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-direction-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-space-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-space-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.modal-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* ©️ Copyright Oluwagbemiga 2023 */
+/* Reusable Mixins for the project - you can add yours */
+/* ©️ Copyright Oluwagbemiga 2023 */
+/* === Set and Modifyable variables ==== */
+/* === Very Basic Variables ==== */
+/* === Colors (you can change the colors) ==== */
+/* Primary Color */
+/* Secondary Color */
+/* Tetiary Color */
+/* === Other Variables ==== */
+/* === Your Variables come in under here ==== */
+/* ©️ Copyright Oluwagbemiga 2023 */
+/* === Imports for the SCSS Buttons Style ==== */
+/* ©️ Copyright Oluwagbemiga 2023 */
+/* === Set and Modifyable variables ==== */
+/* === Very Basic Variables ==== */
+/* === Colors (you can change the colors) ==== */
+/* Primary Color */
+/* Secondary Color */
+/* Tetiary Color */
+/* === Other Variables ==== */
+/* === Your Variables come in under here ==== */
+/* === Button-Specific Variables ==== */
+:root {
+  --btn-transition: background-color 0.2s ease-in;
+  --btn-width: 100%;
+  --btn-hover-color: hsla(0, 0%, 50%, 0.8);
+}
+
+.button {
+  border: 0;
+  outline: 0;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  display: block;
+  padding: 0.8rem 1.6rem;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 12px;
+  width: var(--btn-width);
+  transition: var(--btn-transition);
+  font-weight: 400;
+}
+.button:hover {
+  background-color: var(--btn-hover-color);
+  color: white;
+}
+.button:active {
+  background-color: black;
+  opacity: 0.8;
+  color: white;
+}
+.button:focus, .button:focus-within, .button:focus-visible {
+  outline: 1px solid black;
+  background-color: transparent;
+  color: black;
+}
+.button--outline {
+  border: 1px solid black;
+  color: black;
+  font-weight: 600;
+  background-color: white;
+}
+.button--outline:hover {
+  background-color: #7d7d7d;
+  border: 0;
+  outline: 0;
+}
+.button--outline:active {
+  background-color: grey;
+  color: black;
+}
+.button--outline:focus {
+  outline-offset: 1px solid black;
+}
+.button--primary {
+  background-color: hsl(51, 100%, 50%);
+  color: white;
+}
+.button--primary:hover {
+  background-color: hsla(51, 100%, 50%, 0.51);
+  border: 1px solid hsl(51, 100%, 50%);
+}
+.button--primary_outline {
+  background-color: transparent;
+  color: hsla(51, 100%, 50%, 0.811);
+  border: 1px solid hsla(51, 100%, 50%, 0.811);
+}
+.button--primary_outline:hover {
+  background-color: rgba(250, 212, 0, 0.811);
+  color: white;
+  outline: 1px solid hsla(51, 100%, 50%, 0.811);
+}
+.button--primary_outline:active {
+  background-color: hsla(51, 100%, 50%, 0.811);
+  color: white;
+  opacity: 0.8;
+}
+.button--primary_outline:focus {
+  outline: 1px solid hsla(51, 100%, 50%, 0.811);
+}
+.button--primary:active {
+  background-color: hsla(51, 100%, 50%, 0.7);
+}
+.button--primary:focus {
+  outline: 1px solid hsla(51, 100%, 50%, 0.811);
+  background-color: hsla(51, 100%, 50%, 0.7);
+}
+.button--secondary {
+  background-color: hsl(180, 100%, 50%);
+  color: white;
+}
+.button--secondary:hover {
+  background-color: hsla(180, 100%, 50%, 0.51);
+  border: 1px solid hsl(180, 100%, 50%);
+}
+.button--secondary_outline {
+  background-color: transparent;
+  color: hsla(180, 100%, 50%, 0.811);
+  border: 1px solid hsla(180, 100%, 50%, 0.811);
+}
+.button--secondary_outline:hover {
+  background-color: rgba(0, 250, 250, 0.811);
+  color: white;
+  outline: 1px solid hsla(180, 100%, 50%, 0.811);
+}
+.button--secondary_outline:active {
+  background-color: hsla(180, 100%, 50%, 0.811);
+  color: white;
+  opacity: 0.8;
+}
+.button--secondary_outline:focus {
+  outline: 1px solid hsla(180, 100%, 50%, 0.811);
+}
+.button--secondary:active {
+  background-color: hsla(180, 100%, 50%, 0.7);
+}
+.button--secondary:focus {
+  outline: 1px solid hsla(180, 100%, 50%, 0.811);
+  background-color: hsla(180, 100%, 50%, 0.7);
+}
+.button--tetiary {
+  background-color: hsl(120, 61%, 50%);
+  color: white;
+}
+.button--tetiary:hover {
+  background-color: hsla(120, 61%, 50%, 0.51);
+  border: 1px solid hsl(120, 61%, 50%);
+}
+.button--tetiary_outline {
+  background-color: transparent;
+  color: hsla(120, 61%, 50%, 0.811);
+  border: 1px solid hsla(120, 61%, 50%, 0.811);
+}
+.button--tetiary_outline:hover {
+  background-color: rgba(49, 201, 49, 0.811);
+  color: white;
+  outline: 1px solid hsla(120, 61%, 50%, 0.811);
+}
+.button--tetiary_outline:active {
+  background-color: hsla(120, 61%, 50%, 0.811);
+  color: white;
+  opacity: 0.8;
+}
+.button--tetiary_outline:focus {
+  outline: 1px solid hsla(120, 61%, 50%, 0.811);
+}
+.button--tetiary:active {
+  background-color: hsla(120, 61%, 50%, 0.7);
+}
+.button--tetiary:focus {
+  background-color: hsla(120, 61%, 50%, 0.7);
+  outline: 1px solid hsla(120, 61%, 50%, 0.811);
+  outline-offset: 1px solid hsl(0, 0%, 0%);
+}
+.button--has-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+  gap: 0.2rem;
+}
+.button-icon {
+  display: block;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+.button--loading {
+  cursor: not-allowed;
+  background-color: grey;
+  opacity: 0.4;
+  outline: 0;
+  border: 0;
+}
+
+/* === Scss styles for Card Layout ==== */
+.card {
+  display: block;
+  margin: 0.5rem;
+  background-color: hsla(0, 0%, 100%, 0.57);
+  padding: 1.1rem;
+  border-radius: 10px;
+}
+.card-header {
+  margin-bottom: 0.8rem;
+  max-width: 60ch;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2px;
+}
+.card-body_text {
+  max-width: 80ch;
+  margin-bottom: 15px;
+}
+.card-footer {
+  display: block;
+}
+.card-footer_button {
+  width: 100%;
+}
+.card-footer--has-button-group {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+  align-items: center;
+}
+@media only screen and (max-width: 480px) {
+  .card-footer--has-button-group {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+/* === Dynamic FlexBox layout maker: feel free to tweak to your satisfaction ==== */
+/* Add your own flex box styles here */
+/* === Feel free to customize your layout with the mixin below ==== */
+.flex-container {
+  display: flex;
+}
+@media only screen and (max-width: 480px) {
+  .flex-container {
+    width: 100%;
+    flex-flow: column wrap;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .flex-container {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .flex-container {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* === SCSS For Forms and all reusable form input elements and button ==== */
+/* === NOTE: anywhere you see colors, edit them to your preference ==== */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0.7rem;
+  width: 100%;
+  gap: 1.12rem;
+}
+.form-group-label, .form-group-name {
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 0.4rem;
+  color: hsl(0, 3%, 6%);
+}
+
+.form-control {
+  display: block;
+  appearance: none;
+  width: 100%;
+  outline: 1px solid black;
+  border: 0;
+  padding: 0.8rem 0.5rem;
+  font-weight: 500;
+  color: black;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+  border-radius: 1em;
+  transition: background-color 0.2s ease-in-out;
+  font-size: 18px;
+}
+.form-control:hover {
+  background-color: lightgrey;
+  color: black;
+}
+.form-control:focus, .form-control:active {
+  border: 1px solid black;
+  outline: 1px solid black;
+}
+.form-control::placeholder {
+  color: grey;
+  font-size: 16px;
+}
+
+.form-checkbox-label {
+  appearance: none;
+  margin: 0;
+  padding: 0.3rem;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  background-color: transparent;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.form-checkbox-label::before {
+  content: "✓";
+  width: 20px;
+  height: 20px;
+  color: transparent;
+  position: absolute;
+  left: 4px;
+  transition: 0.1s ease-in;
+}
+.form-checkbox-label:checked::before {
+  color: black;
+}
+.form-checkbox-label:focus {
+  outline-color: black;
+}
+.form-checkbox-label .label {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem;
+  gap: 0.5rem;
+}
+.radio-group_text {
+  font-size: 18px;
+  line-height: 1;
+  color: black;
+}
+
+.form-radio-label {
+  position: relative;
+  appearance: none;
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 500;
+  cursor: pointer;
+}
+.form-radio-label::before {
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+}
+.form-radio-label:checked::before {
+  background-color: black;
+}
+.form-radio-label:checked {
+  border: 1px solid black;
+}
+.form-radio-label:focus {
+  outline-color: black;
+}
+.form-radio-label .label {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.form-button {
+  background: black;
+  color: white;
+  width: 600px;
+  display: block;
+  max-width: 100%;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0.6rem;
+  padding: 0.8rem 0.4rem;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.form-button--has-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.form-select,
+.form-dropdown {
+  border: 0;
+  display: flex;
+  width: 40px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: white;
+  padding: 0.2rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.form-select--display,
+.form-dropdown--display {
+  display: block;
+}
+.form-select--icon,
+.form-dropdown--icon {
+  cursor: pointer;
+}
+.form-select-list,
+.form-dropdown-list {
+  position: absolute;
+  background-color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  display: none;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  top: 30px;
+  left: -1px;
+}
+.form-select-icon-box,
+.form-dropdown-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-select-checkbox,
+.form-dropdown-checkbox {
+  visibility: hidden;
+}
+.form-select-checkbox:checked ~ .form-dropdown-list,
+.form-dropdown-checkbox:checked ~ .form-dropdown-list {
+  display: flex;
+}
+
+/* === HTML CODE FOR THE DROPDOWN MENU
+    <div class="form-dropdown form-dropdown--has-icon">
+        <span class="form-dropdown--display display">Genix</span>
+
+        <input id="dropdown-icon" type="checkbox" class="dropdown-checkbox" />
+        <div class="form-dropdown-icon">
+            <label for="dropdown-icon">
+                &downarrow; ** or any other Icon **
+            </label>
+        </div>
+
+        <div class="form-dropdown-list">
+            <span class="form-dropdown-item">Gbemiga</span>
+            <span class="form-dropdown-item">Gbemiga</span>
+            <span class="form-dropdown-item">Gbemiga</span>
+            <span class="form-dropdown-item">Gbemiga</span>
+        </div>
+    </div>
+==== */
+/* Add your own grid styles here. */
+.grid-container {
+  display: grid;
+  vertical-align: middle;
+  align-items: center;
+  width: 100%;
+}
+.grid-container-col-1 {
+  grid-template-columns: repeat(1fr, 1);
+}
+.grid-container-col-2 {
+  grid-template-columns: repeat(1fr, 2);
+}
+.grid-container-col-3 {
+  grid-template-columns: repeat(1fr, 3);
+}
+.grid-container-col-4 {
+  grid-template-columns: repeat(1fr, 4);
+}
+.grid-container-col-5 {
+  grid-template-columns: repeat(1fr, 5);
+}
+.grid-container-col-6 {
+  grid-template-columns: repeat(1fr, 6);
+}
+
+/* SCSS Icon Styles */
+/* === This should be for the Main Logo === */
+.logo {
+  width: 50px;
+  height: 50px;
+  /* === If Logo has a link, use this class ==== */
+  /* === If Logo doesn't have a link, just use this style ==== */
+}
+.logo_link {
+  width: inherit;
+  height: inherit;
+}
+.logo_link-image {
+  max-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+.logo-image {
+  max-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.icon-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Modal for the Application */
+.modal {
+  position: fixed;
+  background-color: hsl(120, 100%, 25%);
+  padding: 1rem 1.2rem;
+  color: white;
+  margin: 2rem;
+  border-radius: 20px;
+  bottom: 30rem;
+  z-index: 9999;
+  pointer-events: all;
+  translate: 0% 50%;
+  box-shadow: 0 0 2px 0 rgba(1, 4, 2, 0.982);
+  /* Using ASCII Characters */
+  /* Using Images as the close button */
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem;
+  margin-bottom: 1.2rem;
+}
+.modal-close-button {
+  font-size: 21px;
+  font-weight: 600;
+}
+.modal-close-image {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+.modal-body {
+  display: flex;
+  flex-direction: column;
+}
+.modal-body-text {
+  max-width: 60ch;
+}
+.modal-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: hsla(0, 0%, 0%, 0.6);
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 1000;
+}
+.modal-visible {
+  display: none;
+}
+
+/* Imports for the SCSS Navigation Styles */ /* ©️ Copyright Oluwagbemiga 2023 */
+/* Reusable Mixins for the project - you can add yours */
+/* === Scss for Navigation ==== */
+/* === You can tweak (add your JS) as this is built purely with CSS ==== */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem;
+  padding: 1.2rem;
+  /* For the Nav Toggle Action */
+  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.nav-toggle {
+  appearance: none;
+  -webkit-appearance: none;
+  background: black;
+  display: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.nav-toggle, .nav-toggle::before, .nav-toggle::after {
+  width: 25px;
+  height: 5px;
+  cursor: pointer;
+}
+.nav-toggle::before, .nav-toggle::after {
+  content: "";
+  background-color: black;
+  position: absolute;
+}
+.nav-toggle::before {
+  bottom: 10px;
+}
+.nav-toggle::after {
+  top: 10px;
+}
+@media only screen and (max-width: 480px) {
+  .nav-toggle {
+    display: block;
+  }
+}
+
+.nav-menu {
+  display: flex;
+}
+.nav-menu > .nav-icon {
+  display: block;
+  max-width: 100%;
+  min-height: 100%;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+}
+.nav-list .nav-item {
+  transition: transform 0.2s ease-in;
+  padding: 0.6rem 0.2rem;
+}
+.nav-list .nav-item:hover {
+  transform: translateY(-2px);
+  font-weight: 600;
+  /* Add your own hover state */
+}
+.nav-list > .nav-link {
+  color: black;
+  font-size: 1.5em;
+}
+@media only screen and (max-width: 480px) {
+  .nav-list {
+    display: none !important;
+    flex-direction: column;
+  }
+}
+
+/* Nav-toggle action */
+.nav-toggle {
+  transition: transform-origin 0.2s ease-in-out, rotate 0.4s ease-out;
+  /* Changing the appearance of the navigation toggle */
+}
+@media only screen and (max-width: 480px) {
+  .nav-toggle:checked ~ .nav-list {
+    display: flex !important;
+    background-color: hsl(0, 0%, 50%);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.8rem 0.9rem;
+    /* Positioning Properties alongside the parent container */
+    position: fixed;
+    top: 6rem;
+    right: 0;
+    z-index: 1;
+  }
+}
+.nav-toggle:checked {
+  width: 0;
+  translate: -20px;
+}
+.nav-toggle:checked::before {
+  rotate: -220deg;
+  translate: -2px 6px;
+}
+.nav-toggle:checked::after {
+  rotate: 220deg;
+  translate: -2px -13px;
+}
+
+/* === JavaScript class to make header (Navigation and Logo) fixed ==== */
+.fixed-header {
+  position: fixed;
+}
+
+/* === Custom Scrollbar ==== */
+.scrollbar {
+  -webkit-scrollbar-track: none;
+  -webkit-scrollbar-button: none;
+  -webkit-scrollbar-thumb: none;
+}
+
+.switch-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin: 0.7rem;
+}
+
+.switch-box {
+  border: 4px solid hsl(180, 100%, 50%);
+  width: 70px;
+  height: 30px;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  padding: 0.4rem 0;
+  align-items: center;
+}
+
+.switch {
+  appearance: none;
+  -webkit-appearance: none;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: grey;
+  cursor: pointer;
+  margin: 0;
+  transition: translate 0.2s ease-in-out;
+}
+.switch:hover {
+  opacity: 0.6;
+}
+.switch:checked {
+  translate: 40px;
+  background-color: black;
+}
+
+/* === Custom Colors come in here: change as you desire ==== */
+.primary-clr {
+  color: hsl(51, 100%, 50%);
+}
+.primary-bg-color {
+  background-color: hsla(51, 100%, 50%, 0.3);
+}
+.primary-outline-clr {
+  color: hsla(51, 100%, 50%, 0.811);
+}
+
+.secondary-clr {
+  color: hsl(180, 100%, 50%);
+}
+.secondary-bg-color {
+  background-color: hsla(180, 100%, 50%, 0.3);
+}
+.secondary-outline-clr {
+  color: hsla(180, 100%, 50%, 0.811);
+}
+
+.tetiary-clr {
+  color: hsl(120, 61%, 50%);
+}
+.tetiary-bg-color {
+  background-color: hsla(120, 61%, 50%, 0.3);
+}
+.tetiary-outline-clr {
+  color: hsla(120, 61%, 50%, 0.811);
+}
+
+.white-clr {
+  color: hsl(0, 0%, 100%);
+}
+.white-bg-clr {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.black-clr {
+  color: hsl(0, 0%, 0%);
+}
+.black-bg-clr {
+  background-color: hsl(0, 0%, 0%);
+}
+
+.danger-clr {
+  color: rgb(166, 5, 5);
+}
+.danger-bg-clr {
+  background-color: rgb(166, 5, 5);
+}
+
+.purple-clr {
+  color: hsl(300, 100%, 25%);
+}
+.purple-bg-clr {
+  background-color: hsl(300, 100%, 25%);
+}
+
+.success-clr {
+  color: hsl(120, 95%, 22%);
+}
+.success-bg-clr {
+  background-color: hsl(120, 95%, 22%);
+}
+
+.green-clr {
+  color: hsl(120, 100%, 25%);
+}
+.green-bg-clr {
+  background-color: hsl(120, 100%, 25%);
+}
+
+.red-clr {
+  color: hsl(0, 100%, 50%);
+}
+.red-bg-clr {
+  background-color: hsl(0, 100%, 50%);
+}
+
+.yellow-clr {
+  color: hsl(60, 100%, 50%);
+}
+.yellow-bg-clr {
+  background-color: hsl(60, 100%, 50%);
+}
+
+.brown-clr {
+  color: hsl(0, 59%, 41%);
+}
+.brown-bg-clr {
+  background-color: hsl(0, 59%, 41%);
+}
+
+.orange-clr {
+  color: hsl(39, 100%, 50%);
+}
+.orange-bg-clr {
+  background-color: hsl(39, 100%, 50%);
+}
+
+.grey-clr {
+  color: hsl(0, 0%, 50%);
+}
+.grey-bg-clr {
+  background-color: hsl(0, 0%, 50%);
+}
+
+/* ©️ Copyright Oluwagbemiga 2023 */
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.mt-1 {
+  margin-top: 0.25rem !important;
+}
+
+.mt-2 {
+  margin-top: 0.5rem !important;
+}
+
+.mt-3 {
+  margin-top: 1rem !important;
+}
+
+.mt-4 {
+  margin-top: 1.5rem !important;
+}
+
+.mt-5 {
+  margin-top: 3rem !important;
+}
+
+.mt-auto {
+  margin-top: auto !important;
+}
+
+.mr-0 {
+  margin-right: 0 !important;
+}
+
+.mr-1 {
+  margin-right: 0.25rem !important;
+}
+
+.mr-2 {
+  margin-right: 0.5rem !important;
+}
+
+.mr-3 {
+  margin-right: 1rem !important;
+}
+
+.mr-4 {
+  margin-right: 1.5rem !important;
+}
+
+.mr-5 {
+  margin-right: 3rem !important;
+}
+
+.mr-auto {
+  margin-right: auto !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem !important;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.mb-5 {
+  margin-bottom: 3rem !important;
+}
+
+.mb-auto {
+  margin-bottom: auto !important;
+}
+
+.ml-0 {
+  margin-left: 0 !important;
+}
+
+.ml-1 {
+  margin-left: 0.25rem !important;
+}
+
+.ml-2 {
+  margin-left: 0.5rem !important;
+}
+
+.ml-3 {
+  margin-left: 1rem !important;
+}
+
+.ml-4 {
+  margin-left: 1.5rem !important;
+}
+
+.ml-5 {
+  margin-left: 3rem !important;
+}
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.pt-0 {
+  margin-top: 0 !important;
+}
+
+.pt-1 {
+  margin-top: 0.25rem !important;
+}
+
+.pt-2 {
+  margin-top: 0.5rem !important;
+}
+
+.pt-3 {
+  margin-top: 1rem !important;
+}
+
+.pt-4 {
+  margin-top: 1.5rem !important;
+}
+
+.pt-5 {
+  margin-top: 3rem !important;
+}
+
+.pt-auto {
+  margin-top: auto !important;
+}
+
+.pr-0 {
+  margin-right: 0 !important;
+}
+
+.pr-1 {
+  margin-right: 0.25rem !important;
+}
+
+.pr-2 {
+  margin-right: 0.5rem !important;
+}
+
+.pr-3 {
+  margin-right: 1rem !important;
+}
+
+.pr-4 {
+  margin-right: 1.5rem !important;
+}
+
+.pr-5 {
+  margin-right: 3rem !important;
+}
+
+.pr-auto {
+  margin-right: auto !important;
+}
+
+.pb-0 {
+  margin-bottom: 0 !important;
+}
+
+.pb-1 {
+  margin-bottom: 0.25rem !important;
+}
+
+.pb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.pb-3 {
+  margin-bottom: 1rem !important;
+}
+
+.pb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.pb-5 {
+  margin-bottom: 3rem !important;
+}
+
+.pb-auto {
+  margin-bottom: auto !important;
+}
+
+.pl-0 {
+  margin-left: 0 !important;
+}
+
+.pl-1 {
+  margin-left: 0.25rem !important;
+}
+
+.pl-2 {
+  margin-left: 0.5rem !important;
+}
+
+.pl-3 {
+  margin-left: 1rem !important;
+}
+
+.pl-4 {
+  margin-left: 1.5rem !important;
+}
+
+.pl-5 {
+  margin-left: 3rem !important;
+}
+
+.pl-auto {
+  margin-left: auto !important;
+}
+
+.gap-1 {
+  gap: 0.5rem;
+}
+
+.gap-2 {
+  gap: 1rem;
+}
+
+.gap-3 {
+  gap: 1.5rem;
+}
+
+.gap-4 {
+  gap: 2rem;
+}
+
+.gap-5 {
+  gap: 2.5rem;
+}
+
+.gap-6 {
+  gap: 3rem;
+}
+
+.gap-7 {
+  gap: 3.5rem;
+}
+
+.gap-8 {
+  gap: 4rem;
+}
+
+.gap-9 {
+  gap: 4.5rem;
+}
+
+.gap-10 {
+  gap: 5rem;
+}
+
+/* ©️ Copyright Oluwagbemiga 2023 */
+h1 {
+  font-size: 3.7rem !important;
+}
+
+h2 {
+  font-size: 2.93rem !important;
+}
+
+h3 {
+  font-size: 1.7rem !important;
+}
+
+h4 {
+  font-size: 1.54rem !important;
+}
+
+h5 {
+  font-size: 1.36rem !important;
+}
+
+h6 {
+  font-size: 1.21rem !important;
+}
+
+p,
+li {
+  font-weight: 400;
+  font-size: 1.31rem;
+}
+
+a {
+  font-size: 1.1rem;
+}
+
+/* Uncomment after you've set the variables for this colors (This should be as a guide for setting them
+ * .text {
+    &-primary {
+        color: $primary-color !important;
+    }
+
+    &-primary-light {
+        color: $primary-color-light !important;
+    }
+
+    &-primary-deep {
+        color: $primary-color-active !important;
+    }
+
+    &-secondary {
+        color: $sunshade-2 !important;
+    }
+
+    &-secondary-light {
+        color: $sunshade-3 !important;
+    }
+
+    &-secondary-deep {
+        color: $sunshade-1 !important;
+    }
+
+    &-danger {
+        color: $red !important;
+    }
+
+    &-danger-light {
+        color: $red-hover !important;
+    }
+
+    &-danger-deep {
+        color: $red-deep !important;
+    }
+
+    &-gray-out {
+        color: $black-5 !important;
+    }
+
+    &-gray-out-light {
+        color: $black-6 !important;
+    }
+
+    &-gray-out-deep {
+        color: $black-4 !important;
+    }
+
+    &-light {
+        color: $white !important;
+    }
+
+    &-black {
+        color: $black !important;
+    }
+}
+*/
+.fw-very-light {
+  font-weight: 200 !important;
+}
+
+.fw-light {
+  font-weight: 400 !important;
+}
+
+.fw-semi-normal {
+  font-weight: 500 !important;
+}
+
+.fw-bold {
+  font-weight: 600 !important;
+}
+
+.fw-bolder {
+  font-weight: 700 !important;
+}
+
+.fw-boldest {
+  font-weight: 800 !important;
+}
+
+.fs-8 {
+  font-size: 8px !important;
+}
+
+.fs-10 {
+  font-size: 10px !important;
+}
+
+.fs-12 {
+  font-size: 12px !important;
+}
+
+.fs-14 {
+  font-size: 14px !important;
+}
+
+.fs-16 {
+  font-size: 16px !important;
+}
+
+.fs-18 {
+  font-size: 18px !important;
+}
+
+.fs-20 {
+  font-size: 20px !important;
+}
+
+.fs-14 {
+  font-size: 14px !important;
+}
+
+.fs-22 {
+  font-size: 22px !important;
+}
+
+.fs-24 {
+  font-size: 24px !important;
+}
+
+.fs-26 {
+  font-size: 26px !important;
+}
+
+.fs-28 {
+  font-size: 28px !important;
+}
+
+.fs-30 {
+  font-size: 30px !important;
+}
+
+.fs-32 {
+  font-size: 32px !important;
+}
+
+.fs-34 {
+  font-size: 34px !important;
+}
+
+.fs-36 {
+  font-size: 36px !important;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.line-height {
+  line-height: 1.5;
+}
+
+/*# sourceMappingURL=main.css.map */

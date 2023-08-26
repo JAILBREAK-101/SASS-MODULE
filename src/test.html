@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SCSS MODULE TEST PAGE</title>
+    <link href="../dist/main.css" rel="stylesheet" />
+
+    <script defer src="./script.js"></script>
+
+    <script src="https://kit.fontawesome.com/ae93883ba7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="header">
+            <nav class="nav">
+                <div class="logo">
+                    <a class="logo_link" href="#">
+                        <img class="logo_link-image" src="../dist/images/facebook.jpg" alt="Facebook Logo">
+                    </a>
+                </div>
+
+                <!-- <label class="nav-menu" for="nav-bar"> -->
+                <!-- <img class="nav-icon"> if an image is provided -->
+                <!-- </label> -->
+
+                <!-- <div class="container"> -->
+                <!-- </div> -->
+
+                <input class="nav-toggle" id="nav-bar" type="checkbox" />
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="mb-3" title="card-style">
+            <h1>SCSS For Card</h1>
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-header_text">Header</h2>
+                    <p class="card-header_description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit
+                    </p>
+                </div>
+                <div class="card-body">
+                    <p class="card-body_text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, nihil, quaerat quae expedita
+                        distinctio tenetur labore consectetur nulla eum repellat, dolor omnis culpa fugiat excepturi.
+                        Est
+                        tenetur quae quidem illo?
+                        Velit blanditiis libero dolorum distinctio hic dicta quia iure commodi illum in tempora quasi
+                        possimus, provident reprehenderit inventore harum. Quis ullam cumque hic a, tempore maiores?
+                        Officiis rem assum
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <button class="button card-footer_button">Get Started</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-3" title="form-style">
+            <h2>SCSS For Form</h2>
+            <form>
+                <div class="form-group">
+                    <label class="form-group-label" for="username">Username:
+                        <input type="text" class="form-control" id="username" name="username"
+                            placeholder="Enter your username" />
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group-label" for="password">Password:
+                        <input type="text" class="form-control" id="password" name="password"
+                            placeholder="Enter your password" />
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group-label" for="email">Email Address:
+                        <input type="text" class="form-control" id="email" name="email"
+                            placeholder="Enter your email" />
+                    </label>
+                </div>
+
+                <div class="radio-group">
+                    <p class="radio-group_text">Kindly select your data-plan choice</p>
+
+                    <div class=radio-group_buttons>
+                        <label for="50mb">
+                            50MB
+                        </label>
+                        <input type="radio" class="form-radio-label" id="50mb" value="50mb" name="data-plan-choice" />
+                    </div>
+
+                    <div>
+                        <label for="100mb">
+                            100MB
+                        </label>
+                        <input type="radio" class="form-radio-label" id="100mb" value="100mb" name="data-plan-choice" />
+                    </div>
+
+                    <div>
+                        <label for="400mb">
+                            400MB
+                        </label>
+                        <input type="radio" class="form-radio-label" id="400mb" value="400mb" name="data-plan-choice" />
+                    </div>
+
+                    <div>
+                        <label for="1000mb">
+                            1000MB
+                        </label>
+                        <input type="radio" class="form-radio-label" id="1000mb" value="1000mb"
+                            name="data-plan-choice" />
+                    </div>
+                </div>
+
+                <div class="control-display form-control--special">
+                    <input type="checkbox" class="form-checkbox-label" id="terms-conditions" />
+                    <label for="terms-conditions">Do you agree with our terms and conditions?</label>
+                </div>
+
+                <div class="form-button--container">
+                    <input type="submit" value="submit" class="form-button" />
+                </div>
+            </form>
+        </section>
+
+        <section class="mb-3" title="layout-styles">
+            <h3>SCSS For Layout of the Page</h3>
+
+            <h4 title="flexbox">1. FlexBox Layout</h4>
+            <div class="flex-box">
+
+            </div>
+
+            <h4 title="flexbox">2. Grid Layout</h4>
+            <div class="grid">
+
+            </div>
+
+            <h4>3. Float Layout</h4>
+            <div class="float">
+
+            </div>
+        </section>
+
+        <section class="mb-3" title="basic-styles">
+            <h3>SCSS For Other Commonly used Elements</h3>
+
+            <h4 title="buttons">1. Buttons</h4>
+            <div class="d-flex flex-direction-column gap-2 mt-2 mb-2 pr-2 pl-2">
+                <button class="button fs-24">Default Button</button>
+                <button class="button button--outline fs-12">Default Outline Button</button>
+                <button class="button button--primary">Primary Button</button>
+                <button class="button button--primary_outline">Primary Outline Button</button>
+                <button class="button button--secondary">Secondary Button</button>
+                <button class="button button--secondary">Secondary Outline Button</button>
+                <button class="button button--tetiary">Tetiary Button</button>
+                <button class="button button--tetiary">Tetiary Outline Button</button>
+            </div>
+
+            <h4 title="links">2. Links</h4>
+            <div>
+
+            </div>
+        </section>
+
+        <!-- The below will be our modal container -->
+        <section title="outside-screen-styles modal-wrapper">
+            <h3>SCSS For Outside Screen Styles</h3>
+            <h4 title="modal">1. Modal</h4>
+            <p>Below is our modal button, click it and you'll see the modal pop-up</p>
+            <button class="button modal-open-button">Open Modal</button>
+
+            <div class="modal modal-visible">
+                <div class="modal-header">
+                    <h2 class="modal-header-text">Modal Header</h2>
+                    <button class="modal-close-button">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <p class="modal-body-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
+                        perspiciatis cum? Quis fugit nulla velit minus quas, labore repellat veniam facere adipisci illo
+                        eius nemo odio atque repellendus, ab quisquam.
+                    </p>
+                </div>
+            </div>
+
+            <div class="overlay"></div>
+        </section>
+
+        <section class="themes-style">
+            <h3>SCSS For Themes for light and Dark Mode</h3>
+
+            <p>Toggle the switch to change the mode of the screen</p>
+            <div class="switch-container">
+                <span class="switch-label">Light</span>
+
+                <div class="switch-box">
+                    <input type="checkbox" class="switch">
+                </div>
+
+                <span class="switch-label">Dark</span>
+            </div>
+        </section>
+    </div>
+    </section>
+
+    </div>
+</body>
+
+</html>
